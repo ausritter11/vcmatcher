@@ -47,8 +47,8 @@ if st.button("Initialize VC Matcher") or ("initialized" not in st.session_state)
         vector_store.add_documents(splits)
         st.session_state.vector_store = vector_store
 
-        system_template = """You are a startup-VC matching assistant. Given startup details, recommend 3-5 VCs from the context that are a strong fit. 
-Use VC's preferred sector, stage, and any relationship strength if helpful.
+        system_template = """You are a startup-VC matching assistant. Given startup details, recommend the top 5-10 VCs from the context that are a strong fit. 
+Use VC's preferred sector and stage, and relationship strength if necessary. Provide reasoning for exactly why each investor was selected.
 
 Context:
 {context}
@@ -56,7 +56,7 @@ Context:
 Startup Description:
 {question}
 
-Answer with a concise list of VC names with reasons."""
+Answer with a concise list of VC names with reasons and links to the website."""
 
         chat_prompt = ChatPromptTemplate.from_messages([
             ("system", system_template),
