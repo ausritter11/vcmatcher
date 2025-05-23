@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain-community
+langgraph
+openai
+pymupdf
+pandas
+python-dotenv
