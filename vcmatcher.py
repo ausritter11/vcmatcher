@@ -14,7 +14,7 @@ from langgraph.graph import START, StateGraph
 # Set up Streamlit
 st.set_page_config(page_title="VC Matcher", page_icon="🤝", layout="wide")
 st.image("logo.png", width=200)  # RBV logo
-st.title("🤖 VC Matchmaker for Red Beard Ventures & Denarii Labs")
+st.title("VC Matchmaker for Red Beard Ventures & Denarii Labs")
 st.markdown("This app preloads a VC relationship CSV and matches your startup to the best-fit VCs in our network.")
 
 # Session state initialization
